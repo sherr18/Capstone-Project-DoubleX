@@ -1,24 +1,16 @@
 const axios = require('axios');
-//用户API
+//User API
 const api_key="361f05c43d80eb10c49a953abd35668b";
 const pyUrl="http://127.0.0.1:5000";
 const Axios=axios.create({
-    proxy:{
-        "host":"127.0.0.1",
-        "port":"7890",
-        "protocol":"http"
-    }
+
 })
 const PyAxios=axios.create({
-    proxy:{
-        "host":"127.0.0.1",
-        "port":"3007",
-        "protocol":"http"
-    }
+
 })
 
 
-//查询电影列表信息
+//Find the information from the movie list
 const findMovieListModel=async(list_id)=>{
     var data=null;
     await Axios.get('https://api.themoviedb.org/3/list/'+list_id+"?api_key="+api_key).then(function(res){
@@ -27,7 +19,7 @@ const findMovieListModel=async(list_id)=>{
     return data;
 }
 
-//查询十个电影列表名称
+//Find 10 movie name from the movie list
 const findTenMovieListModel=async()=>{
     var data=[];
     for(var i=1;i<=10;i++){
@@ -38,7 +30,7 @@ const findTenMovieListModel=async()=>{
     return data;
 }
 
-//根据名称查询电影内容
+//Find the content of the movie according to the movie name
 const searchMovieModel=async(query)=>{
     var data=[];
     await Axios.get('https://api.themoviedb.org/3/search/movie?api_key='+api_key+"&query="+query).then(function(res){
@@ -49,7 +41,7 @@ const searchMovieModel=async(query)=>{
 }
 
 
-//获取正在播放的院线电影列表
+//Get the playing movie list
 const nowMovieModel=async()=>{
     var data=[];
     await Axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key='+api_key+"&language=en-US&region=CA").then(function(res){
@@ -65,7 +57,7 @@ const nowMovieModel=async()=>{
     return data;
 }
 
-//获取即将播放的电影列表
+//Get a list of upcoming movies
 const upcomingMovieModel=async()=>{
     var data=[];
     await Axios.get('https://api.themoviedb.org/3/movie/upcoming?api_key='+api_key+"&language=en-US&region=CA").then(function(res){
@@ -81,7 +73,7 @@ const upcomingMovieModel=async()=>{
     return data;
 }
 
-//获取tmdb流行的电影列表
+//Get a list of popular tmdb movies
 const popularMovieModel=async()=>{
     var data=[];
     await Axios.get('https://api.themoviedb.org/3/movie/popular?api_key='+api_key+"&language=en-US&page=1").then(function(res){
@@ -98,7 +90,7 @@ const popularMovieModel=async()=>{
 }
 
 
-//查询电影详情信息
+//Get the detail info of movies
 const findMovieDetailModel=async(movie_id)=>{
     var data=null;
     await Axios.get('https://api.themoviedb.org/3/movie/'+movie_id+"?api_key="+api_key).then(async function(res){
@@ -116,7 +108,7 @@ const findMovieDetailModel=async(movie_id)=>{
     return data;
 }
 
-//获取电影推荐列表
+//Get the list of recommended movies
 const recommendModel=async(movie)=>{
     var genresList=[];
     var movieName=movie.title.toLowerCase();
@@ -164,7 +156,7 @@ const recommendModel=async(movie)=>{
     return recomeList;
 }   
  
-//查询当前电影的所有评论记录
+//Query all of the comments for current movie
 const findCommentAllModel=async(mid)=>{
     var commentList=[];
     await axios.get(pyUrl+"/comments/"+mid).then(function(res){
@@ -175,7 +167,7 @@ const findCommentAllModel=async(mid)=>{
     return commentList;
 }
 
-//查询当前电影评论对应的用户信息
+//Query the user info according to  current movie's comment 
 const findCommentByUserModel=async(comment)=>{
     var now_comment=[];
     for( let item of comment ){
