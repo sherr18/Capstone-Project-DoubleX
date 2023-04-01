@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Movie</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/icofont.css" />
+		<link rel="stylesheet" href="css/mian_style.css" />
+		<script src='./js/jquery.js'></script> 
+	</head>
+	<body>
+		<!--头部开始	-->
+		<header class="header">
+			<div class="container">
+				<div class="header_area">
+					<div class="logo">
+						<a href="index.html">
+							<img src="picture/logo.png" alt="logo"/>
+						</a>
+					</div>	
+					<div class="meau">
+						<ul>
+							<li>
+								<a class="active" href="#">Home</a>
+							</li>
+							<li style="width:240px;">
+								<a href="/popularList">Popular Recommended Movies List</a>
+							</li>
+							<li id="login">
+								<a class="" href="/login">Login</a>
+							</li>
+							<li class="meau_search">
+								<input type="text" id="texts" >
+								<button onclick="search()">
+									<svg t="1679068600974" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2768" width="20" height="20"><path d="M919.22 876.82L703.05 666.48c52.14-60.24 83.68-138.79 83.68-224.71 0-189.73-153.81-343.54-343.54-343.54-189.73 0-343.54 153.81-343.54 343.54s153.81 343.54 343.54 343.54c82.2 0 157.65-28.89 216.78-77.04l217.42 211.55a29.92 29.92 0 0 0 20.92 8.5c7.82 0 15.62-3.04 21.5-9.08 11.54-11.87 11.28-30.86-0.59-42.42zM553.53 703.05c-34.92 14.77-72.05 22.26-110.35 22.26s-75.43-7.49-110.35-22.26c-33.76-14.28-64.09-34.73-90.15-60.79-26.06-26.06-46.51-56.39-60.79-90.15-14.77-34.92-22.26-72.05-22.26-110.35s7.49-75.43 22.26-110.35c14.28-33.76 34.73-64.09 60.79-90.15 26.06-26.06 56.39-46.51 90.15-60.79 34.92-14.77 72.05-22.26 110.35-22.26s75.43 7.49 110.35 22.26c33.76 14.28 64.09 34.73 90.15 60.79 26.06 26.06 46.51 56.39 60.79 90.15 14.77 34.92 22.26 72.05 22.26 110.35s-7.49 75.43-22.26 110.35c-14.28 33.76-34.73 64.09-60.79 90.15-26.06 26.06-56.39 46.52-90.15 60.79z" p-id="2769" fill="#ffffff"></path></svg>								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--头部结束-->			
+		</header>
+		<!--内容部分开始-->
+			<section id="content">
+				<!--banner开始-->
+				<div class="banner">
+					<ul class="list">
+						<% for (var key in upcomingList) { %>
+							<% if(key < 5){ %>
+								<li><a href="#" onclick="openMovie('<%=upcomingList[key].id%>')"><img style="width:100%;height:100%;" src="https://image.tmdb.org/t/p/original<%=upcomingList[key].poster_path%>" alt="" /></a></li>
+							<% } %>	
+						<% } %>
+					</ul>
+					<ul class="btn">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+					</ul>
+					
+					<a href="javascript:;" class="arrow left">&lt</a>
+					<a href="javascript:;" class="arrow right">&gt</a>
+				</div>
+
+				<!--近期热播-->
+				<div class="con_area">
+					<div class="container">
+						<div class="recent_con">
+							<div class="con_top">
+								<h1>
+									<i class="icofont icofont-movie" ></i>
+									Theatrical film
+								</h1>
+								<a href="index.html" class="more">
+									MORE>>
+								</a>
+							</div>
+							<div class="con_main">
+								<ul style="overflow:hidden;margin-bottom: 20px;">
+                                    
+                                    <% for (var key in nowList) { %>
+                                        <% if(key < 8){ %>
+                                        <li  class="img_right" onclick="openMovie('<%=nowList[key].id%>')">
+                                            <% if(nowList[key].poster_path!=null){ %>
+                                                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<%=nowList[key].poster_path%>" alt="1" />
+                                            <% }else{ %>
+                                                <img style="width: 300px; height: 384px;" src="images/img.png" alt="1" />
+                                            <% } %>
+                                            <a>
+                                                <i class="icofont icofont-ui-play"></i>
+                                            </a>
+                                            <h2 class="hiden_text"><%=nowList[key].title%></h2>
+                                            <div class="review">
+                                                <div class="author-review">
+                                                    <b class="icofont icofont-star"></b>
+                                                    <span><%=nowList[key].popularity%></span>
+                                                </div>
+                                                <h4><%=nowList[key].release_date%></h4>
+                                            </div>
+                                        </li>
+                                        <% } %>
+                                    <% } %>
+                                    
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!--经典电影-->
+				<div class="con_area">
+					<div class="container">
+						<div class="jd_con">
+							<div class="con_top">
+								<h1>
+									<i class="icofont icofont-film" ></i>
+									Upcoming Movies
+								</h1>
+								<a href="index.html" class="more">
+									MORE>>
+								</a>
+							</div>
+                            <div class="con_main">
+								<ul style="overflow:hidden;margin-bottom: 20px;">
+                                    
+                                    <% for (var key in upcomingList) { %>
+                                        <% if(key < 8){ %>
+                                        <li class="img_right" onclick="openMovie('<%=upcomingList[key].id%>')">
+                                            <% if(upcomingList[key].poster_path!=null){ %>
+                                                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<%=upcomingList[key].poster_path%>" alt="1" />
+                                            <% }else{ %>
+                                                <img style="width: 300px; height: 384px;" src="images/img.png" alt="1" />
+                                            <% } %>
+                                            <a>
+                                                <i class="icofont icofont-ui-play"></i>
+                                            </a>
+                                            <h2 class="hiden_text"><%=upcomingList[key].title%></h2>
+                                            <div class="review">
+                                                <div class="author-review">
+                                                    <b class="icofont icofont-star"></b>
+                                                    <span><%=upcomingList[key].popularity%></span>
+                                                </div>
+                                                <h4><%=upcomingList[key].release_date%></h4>
+                                            </div>
+                                        </li>
+                                        <% } %>
+                                    <% } %>
+                                    
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			<!--流行电影-->
+				<div class="con_area">
+					<div class="container">
+						<div class="jd_con">
+							<div class="con_top">
+								<h1>
+									<i class="icofont icofont-coffee-cup" ></i>
+									Popular Movie
+								</h1>
+								<a href="index.html" class="more">
+									MORE>>
+								</a>
+							</div>
+                        </div>
+                        <div class="news-slide-area">
+                            <div class="news-slider">
+                                <% for (var key in popularList) { %>
+                                    <% if(key < 5){ %>
+                                    <div class="single-news">
+                                        <div class="news-bg-1" style="background-image: url('https://image.tmdb.org/t/p/w533_and_h300_bestv2/<%=popularList[key].poster_path%>');"></div>
+                                        <div class="news-date">
+                                            <h2><span><%=popularList[key].release_date%></span></h2>
+                                        </div>
+                                        <div class="news-content">
+                                            <h2><%=popularList[key].original_title%></h2>
+                                            <p><%=popularList[key].overview%></p>
+                                        </div>
+                                        <a href="javascript:void(0)" onclick="openMovie('<%=popularList[key].id%>')">Read More</a>
+                                    </div>
+                                    <% } %>
+                                <% } %>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			
+			</section>
+			<!--end start-->
+		<footer id="end">
+			<div class="container">
+				<span class="company">
+					
+				</span>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="../js/jquery.js" ></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script src="../js/comment.js"></script>
+</html>

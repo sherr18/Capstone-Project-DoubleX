@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+}
+button{
+    padding: 0.8vw 3vw;
+    font-size: medium;
+    cursor: pointer;
+    border-radius: 7vw;
+    border: none;       
+}
+.search_box{
+    margin: 2vw 0vw;
+    input{
+        width: 25vw;
+    }
+}
+.bg_blue{
+    background-color: #3c9bed;
+}
+.bg_red{
+    background-color: #f43c3c;
+}
+.bg_green{
+    background-color: #87f43c;
+}
+input[type=text]{
+    padding: 0.7vw 0.8vw;
+    border-radius: 6px;
+    border: 1px solid #bfc3c3;
+}
+textarea{
+    padding: 0.7vw 0.8vw;
+    border-radius: 6px;
+    border: 1px solid #bfc3c3;
+}
+select{
+    padding: 0.7vw 1.8vw;
+    border-radius: 6px;
+    border: 1px solid #bfc3c3;
+    background: none;
+}
+.showadd{
+    text-align: left;
+    width: 100%;
+    a{
+        text-decoration: none;
+        font-size: larger;
+        font-weight: bold;
+    }
+    a:hover{
+        color:aqua;
+    }
+}
+.addBox{
+    display: block;
+    position: absolute;
+    width: 50vw;
+    padding: 3vw;
+    text-align: center;
+    background: aliceblue;
+    border-radius: 2vw;
+    p{
+        margin-top: 2vw;
+    }
+}
+.editBox{
+    @extend .addBox;
+}
+.contentBox{
+    width: 100%;
+    margin: 1vw 0vw 0vw 0vw;
+    table{
+        width:100%;
+        thead{
+            font-size: large;
+            font-weight: bold;
+        }
+        tbody{
+            text-align: center;
+        }
+        tr{
+            td{
+                word-wrap: break-word;
+                word-break: break-all;
+                width:6%;
+                padding: 0.8vw 1vw;
+            }
+            td:nth-child(2){
+                width:10%;
+            }
+            td:nth-child(3){
+                width:15%;
+            }
+            td:nth-child(6){
+                width:11%;
+            }
+            td:nth-child(7){
+                width:16%;
+            }
+        }
+    }
+}

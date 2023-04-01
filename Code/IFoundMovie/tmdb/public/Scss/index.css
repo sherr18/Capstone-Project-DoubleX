@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+}
+
+button {
+  padding: 0.8vw 3vw;
+  font-size: medium;
+  color: white;
+  cursor: pointer;
+  border-radius: 7vw;
+  border: none;
+  background: aquamarine;
+}
+button:hover{
+  color: aquamarine;
+  background: white;
+}
+.search_box {
+  margin: 2vw 0vw;
+}
+.search_box input {
+  width: 25vw;
+}
+
+.bg_blue {
+  background-color: #3c9bed;
+}
+
+.bg_red {
+  background-color: #f43c3c;
+}
+
+.bg_green {
+  background-color: #87f43c;
+}
+
+input[type=text] {
+  padding: 0.7vw 0.8vw;
+  border-radius: 6px;
+  border: 1px solid #bfc3c3;
+}
+
+textarea {
+  padding: 0.7vw 0.8vw;
+  border-radius: 6px;
+  border: 1px solid #bfc3c3;
+}
+
+select {
+  padding: 0.7vw 1.8vw;
+  border-radius: 6px;
+  border: 1px solid #bfc3c3;
+  background: none;
+}
+
+.showadd {
+  text-align: left;
+  width: 100%;
+}
+.showadd a {
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bold;
+}
+.showadd a:hover {
+  color: aqua;
+}
+.search_box{
+  margin: 2vw 0vw;
+}
+.search_box input{
+  width: 25vw;
+}
+.addBox, .editBox {
+  display: block;
+  position: absolute;
+  width: 50vw;
+  padding: 3vw;
+  text-align: center;
+  background: aliceblue;
+  border-radius: 2vw;
+}
+.addBox p, .editBox p {
+  margin-top: 2vw;
+}
+
+.contentBox {
+  width: 100%;
+  margin: 1vw 0vw 0vw 0vw;
+}
+.contentBox table {
+  width: 100%;
+}
+.contentBox table thead {
+  font-size: large;
+  font-weight: bold;
+}
+.contentBox table tbody {
+  text-align: center;
+}
+.contentBox table tr td {
+  word-wrap: break-word;
+  word-break: break-all;
+  width: 6%;
+  padding: 0.8vw 1vw;
+}
+.contentBox table tr td:nth-child(2) {
+  width: 10%;
+}
+.contentBox table tr td:nth-child(3) {
+  width: 15%;
+}
+.contentBox table tr td:nth-child(6) {
+  width: 11%;
+}
+.contentBox table tr td:nth-child(7) {
+  width: 16%;
+}/*# sourceMappingURL=index.css.map */
