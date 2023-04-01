@@ -22,4 +22,4 @@
 [VLog6](https://youtu.be/wC1WK8TTRq0)
 
 ## Road Map
-[Road Map](https://app.clickup.com/9003048722/v/s/90030110224)
+[![Road Map](https://github.com/sherr18/Capstone-Project-DoubleX/blob/main/Documents/Road%20Map/Road%20Map.png)](https://app.clickup.com/9003048722/v/s/90030110224)
