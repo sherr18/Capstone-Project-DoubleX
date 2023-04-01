@@ -7,3 +7,6 @@
 
 ## Final Demo
 [Final Demo](https://youtu.be/REMxrXgBKSE)
+
+## Capstone VLogs
+[VLog1](https://youtu.be/dTELsxghfa8)
