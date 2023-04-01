@@ -8,7 +8,7 @@ const{
 const ejs=require('ejs');
 const fs = require('fs');
 
-//进入登录页面
+//login
 const openLogin=async(req,res)=>{
     fs.readFile('./view/login.ejs',function(err,nowData){
         var template=nowData.toString();
@@ -17,7 +17,7 @@ const openLogin=async(req,res)=>{
    });
 }
 
-//进入注册页面
+//register
 const openRegister=async(req,res)=>{
     fs.readFile('./view/register.ejs',function(err,nowData){
         var template=nowData.toString();    
@@ -27,10 +27,10 @@ const openRegister=async(req,res)=>{
 }
 
 
-//查询电影列表控制层
+//Query the movie list control layer
 const findMovieList=async(req,res)=>{
     const list_id =req.query.proplue_id;
-    //操作数据库
+    //Operational database
     let rs=await findMovieListModel(list_id);
     fs.readFile('./view/proplueMovie.ejs',function(err,nowData){
          var template=nowData.toString();
@@ -40,7 +40,7 @@ const findMovieList=async(req,res)=>{
     });
 }
 
-//获取十个热门电影列表
+//Get a list of ten hot movies
 const findTenMovieList=async(req,res)=>{
     let rs= await findTenMovieListModel();
     fs.readFile('./view/proplueList.ejs',function(err,nowData){
@@ -51,7 +51,7 @@ const findTenMovieList=async(req,res)=>{
    });
 }
 
-//搜索电影
+//search movies
 const searchMovie=async(req,res)=>{
     const{query}=req.params;
     let rs= await searchMovieModel(query);
@@ -63,7 +63,7 @@ const searchMovie=async(req,res)=>{
    });
 }
 
-//首页显示 正在播放的院线、即将播放、tmdb流行、电影列表、
+//Home page shows playing theaters, coming soon, tmdb popular, movie list,
 const indexMovie=async(req,res)=>{
     let nowList= await nowMovieModel();
     let upcomingList=await upcomingMovieModel();
@@ -76,7 +76,7 @@ const indexMovie=async(req,res)=>{
    });
 }
  
-//查找电影详情  
+//search movie detail
 const detailMovie=async(req,res)=>{
     const movie_id=req.query.movie_id;
     let movie= await findMovieDetailModel(movie_id);
@@ -94,7 +94,7 @@ const detailMovie=async(req,res)=>{
 
 
 
-//导出成员
+//export numbers
 module.exports={
     openLogin,
     openRegister,
