@@ -17,7 +17,7 @@ To run this project, you would need the following installed on your local machin
 (https://dev.mysql.com/downloads/windows/installer/8.0.html)
 - **SQLyog** (https://sqlyog.en.softonic.com/)
 
-When the necessary things are downloaded, you are good to go!!! 😉
+When the necessary stuffs are downloaded, you are good to go!!! 😉
 
 👉 And here is the specific [User Manual](https://github.com/sherr18/Capstone-Project-DoubleX/blob/cefbf2bcbdd624f8cebf606afa96f4dc0e9d4d20/Documents/Initialization/User%20Manual.pdf)
 
