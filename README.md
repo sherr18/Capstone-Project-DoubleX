@@ -1,6 +1,17 @@
 # Capstone-Project-DoubleX
 
 ## Introduction
+We are both movie lovers, so for the capstone we wanted to focus on some of the issues about movie.
+
+We are concerned that many people can not make a good choice when they want to watch a movie, so they may waste time or even lose interest. So we want to improve that as much as possible.
+
+IFoundMovie is a movie recommendation website created by us. It aims to recommend movies to users that they may like. 
+
+## Run Locally:
+To run this project, you would need the following installed on your local machine:
+
+- *PyCharm* (https://www.jetbrains.com/pycharm/)
+
 
 
 ## Commercial
