@@ -18,6 +18,7 @@ To run this project, you would need the following installed on your local machin
 - **SQLyog** (https://sqlyog.en.softonic.com/)
 
 When the necessary things are downloaded, you are good to go!!! 😉
+
 👉 And here is the specific user manual:
 
 
