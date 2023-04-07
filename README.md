@@ -10,7 +10,16 @@ IFoundMovie is a movie recommendation website created by us. It aims to recommen
 ## Run Locally:
 To run this project, you would need the following installed on your local machine:
 
-- *PyCharm* (https://www.jetbrains.com/pycharm/)
+- **Python** (https://www.python.org/)
+- **PyCharm** (https://www.jetbrains.com/pycharm/)
+- **MySQL** 
+(https://www.mysql.com/)
+(https://dev.mysql.com/downloads/windows/installer/8.0.html)
+- **SQLyog** (https://sqlyog.en.softonic.com/)
+
+When the necessary things are downloaded, you are good to go!!! 😉
+👉 And here is the specific user manual:
+
 
 
 
