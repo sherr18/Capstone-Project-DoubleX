@@ -1,13 +1,13 @@
 # Capstone-Project-DoubleX
 
-## Introduction
+## 👀 Introduction
 We are both movie lovers, so for the capstone we wanted to focus on some of the issues about movie.
 
 We are concerned that many people can not make a good choice when they want to watch a movie, so they may waste time or even lose interest. So we want to improve that as much as possible.
 
 IFoundMovie is a movie recommendation website created by us. It aims to recommend movies to users that they may like. 
 
-## Run Locally:
+## 👨‍💻 Run Locally:
 To run this project, you would need the following installed on your local machine:
 
 - **Python** (https://www.python.org/)
@@ -26,13 +26,13 @@ When the necessary things are downloaded, you are good to go!!! 😉
 (http://104.197.235.131:3007)
 
 
-## Commercial
+## 💸 Commercial
 [IFoundMovie Commercial](https://youtu.be/YTtXit-VW9Y)
 
-## Final Demo
+## 📺 Final Demo
 [Final Demo](https://youtu.be/REMxrXgBKSE)
 
-## Capstone VLogs
+## 🔗 Capstone VLogs
 [VLog1](https://youtu.be/dTELsxghfa8)
 
 [VLog2](https://youtu.be/B3ce5sasnTA)
@@ -45,5 +45,5 @@ When the necessary things are downloaded, you are good to go!!! 😉
 
 [VLog6](https://youtu.be/wC1WK8TTRq0)
 
-## Road Map
+## 🗺 Road Map
 [![Road Map](https://github.com/sherr18/Capstone-Project-DoubleX/blob/main/Documents/Road%20Map/Road%20Map.png)](https://app.clickup.com/9003048722/v/s/90030110224)
